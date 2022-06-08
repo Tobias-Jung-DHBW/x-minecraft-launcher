@@ -460,6 +460,7 @@ modpack:
   edit: Edit Modpack Info
   emitCurseforge: Emit Curseforge Modpack
   emitMcbbs: Emit MCBBS Modpack
+  emitModrinth: Emit Modrinth Modpack
   error:
     requirename: Name is required! Please come up a modpack name!
   export: Export as Modpack
@@ -513,8 +514,12 @@ modrinth:
   downloads: Downloads
   environments:
     client: Client
+    default: Default
     name: Environment
+    optional: Optional
+    required: Required
     server: Server
+    unsupported: Unsupported
   followers: Followers
   gallery: Gallery
   gameVersions:

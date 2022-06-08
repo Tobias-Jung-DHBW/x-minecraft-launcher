@@ -116,7 +116,7 @@ export class CurseForgeService extends StatefulService<CurseforgeState> implemen
     const resourceService = this.resourceService
     const networkManager = this.networkManager
     try {
-      const destination = join(this.app.temporaryPath, basename(file.downloadUrl))
+      const destination = join(this.app.temporaryPath, file.fileName)
       const project = await this.fetchProject(projectId)
       const imageUrl = project.attachments[0]?.thumbnailUrl
       const task = new DownloadTask({

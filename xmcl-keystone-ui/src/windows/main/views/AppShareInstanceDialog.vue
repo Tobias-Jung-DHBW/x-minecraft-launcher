@@ -239,7 +239,6 @@ const selected = ref([] as string[])
 provideFileNodes(useInstanceFileNodesFromLocal(computed(() => manifest.value?.files || []), {
   curseforge: true,
   modrinth: true,
-  downloads: true,
 }))
 
 const minecraft = computed(() => manifest.value?.runtime.minecraft)
@@ -286,7 +285,7 @@ watch(isShown, async (shown) => {
       manifest.value = parameter.value as any
     } else {
       loading.value = true
-      manifest.value = await getInstanceManifest(instanceState.path).finally(() => { loading.value = false })
+      manifest.value = await getInstanceManifest({ path: instanceState.path }).finally(() => { loading.value = false })
     }
   }
 })

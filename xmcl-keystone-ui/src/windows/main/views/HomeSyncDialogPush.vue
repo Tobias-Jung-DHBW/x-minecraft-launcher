@@ -63,7 +63,6 @@ const errorText = ref('')
 const nodes = useInstanceFileNodesFromLocal(files, {
   modrinth: true,
   curseforge: true,
-  downloads: true,
 })
 provideFileNodes(nodes)
 

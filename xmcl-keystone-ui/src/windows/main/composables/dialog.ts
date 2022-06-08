@@ -7,12 +7,20 @@ export const DIALOG_SYMBOL: InjectionKey<{ dialog: Ref<string>; parameter: Ref<a
 export const DIALOG_JAVA_ISSUE: InjectionKey<Ref<{ type: 'incompatible' | 'missing'; version: JavaVersion }>> = Symbol('JavaIssue')
 
 export function useZipFilter() {
-  const { $t } = useI18n()
+  const { t } = useI18n()
   const zipFilter = {
     extensions: ['zip'],
-    name: $t('zip'),
+    name: t('extensions.zip'),
   }
   return zipFilter
+}
+
+export function useModrinthFilter() {
+  const { t } = useI18n()
+  const filter = {
+    extends: ['mrpack'],
+    name: t('extensions.mrpack'),
+  }
 }
 
 export function provideDialog() {
